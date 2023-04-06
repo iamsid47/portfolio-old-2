@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="menu.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
     <title>Siddhesh Kulthe</title>
   </head>
   <body>
@@ -67,5 +71,37 @@
         </div>
       </header>
     </section>
+    <section>
+      <div>
+        <div class="p-4 mx-2 my-6 justify-center flex">
+          <h1
+            class="relative text-8xl font-bold uppercase text-gray-600"
+            id="Text"
+            style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
+          >
+            This is
+            <span class="font-extrabold text-gray-800 tracking-tighter"
+              >Siddhesh</span
+            >.
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let text = new SplitType("#Text");
+      let characters = document.querySelectorAll(".char");
+
+      for (i = 0; i < characters.length; i++) {
+        characters[i].classList.add("translate-y-full");
+      }
+
+      gsap.to(".char", {
+        y: 0,
+        stagger: 0.05,
+        delay: 0.02,
+        duration: 0.5,
+      });
+    </script>
   </body>
 </html>
