@@ -4,3 +4,7 @@ body {
   font-family: "Inter", sans-serif;
   letter-spacing: -0.025em;
 }
+
+h1 {
+  font-family: "SF Pro Display", "Inter";
+}
